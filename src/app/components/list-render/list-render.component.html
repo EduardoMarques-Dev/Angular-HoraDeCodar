@@ -3,6 +3,13 @@
   <ul>
     <li *ngFor="let animal of animals">
       Nome: {{ animal.name }} - Tipo: {{ animal.type }}
+      <button (click)="showAge(animal)">Show age</button>
     </li>
   </ul>
+
+  <h3 *ngIf="animalDetails == ''; else mostrarIdadeTemplate"> Você ainda não selecionou um animal!</h3>
+  <ng-template #mostrarIdadeTemplate>
+    <h3 >{{animalDetails}}</h3>
+  </ng-template>
+
 </div>
