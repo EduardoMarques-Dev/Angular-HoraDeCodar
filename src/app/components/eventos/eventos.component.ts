@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eventos.component.scss']
 })
 export class EventosComponent implements OnInit {
-  show: boolean = false;
+  humor: boolean = false;
+
+  mouse : string = "'--'";
 
   constructor() { }
 
@@ -14,7 +16,11 @@ export class EventosComponent implements OnInit {
   }
 
   showMessage(): void {
-    this.show = !this.show; // toggle
+    this.humor = !this.humor; // toggle
+  }
+
+  mouseAcao(acao : string): void {
+    this.mouse = acao;
   }
 
 }

@@ -1,4 +1,11 @@
 <div class="class">
-  <button (click)="showMessage()">Clique em mim!</button>
-  <p *ngIf="show">Exibindo mensagem!</p>
+  <button (dblclick)="showMessage()">Clique em mim!</button>
+  <p *ngIf="humor; else mudandoHumor">Eu estou feliz! 🤣😎🤠</p>
+  <ng-template #mudandoHumor>
+    <p>Eu estou triste! 😥😩😭</p>
+  </ng-template>
+
+  <p (mouseenter)="mouseAcao('entrou')" (mousedown)="mouseAcao('clicou')" (mouseup)="mouseAcao('desclicou')" (mouseleave)="mouseAcao('deixou')">
+    Eu : {{ mouse }}
+  </p>
 </div>
