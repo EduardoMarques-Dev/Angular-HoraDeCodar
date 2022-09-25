@@ -9,5 +9,11 @@ export class AppComponent {
 
   userName : string = 'Joaquim';
 
+  userData = {
+    email: 'joaquim@email.com',
+    phone: '4002-8922',
+    adress: 'OldTown Road'
+  }
+
   title = 'curso-angular';
 }
